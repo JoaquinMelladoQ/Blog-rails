@@ -6,7 +6,10 @@ class PostsController < ApplicationController
   end
   
   def create
-    @posts = Post.create(title: params[:title], image_url: params[:image_url], content: params[:content])
+    @posts = Post.create(title: params[:title], 
+                         image_url: params[:image_url], 
+                         content: params[:content])
+    redirect_to posts_index_url 
   end
 
   def dashboard
