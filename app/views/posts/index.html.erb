@@ -1,18 +1,12 @@
 <h1>Posts</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Image</th>
-    <th>Content</th>
-    <th>Created_at</th>    
-  </tr>
-  <% @posts.present? && @posts.each do |post|%>
-    <tr>
-        <td><%= post.title%></td>
-        <td><%= image_tag post.image_url%></td>
-        <td><%= post.content%></td>
-        <td><%= post.created_at%></td>
-    </tr>
+<ul>
+  <% @posts.present? && @posts.each do |p| %>
+    <li>Title: <%= p.title %></li>
+    <li>Content: <%= p.content %></li>
+    <br>
+    <li>Cover: <%= image_tag p.image_url %></li>
+    <li>Created at: <%= p.created_at.strftime("%F") %></li>
+    <br>
   <% end %>
-</table>
+</ul>
