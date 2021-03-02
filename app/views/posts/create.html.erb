@@ -1,0 +1,16 @@
+<h1>Posts#create</h1>
+<% if @posts.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(@posts.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% @posts.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% else %>
+    <p><%= @posts.title %></p>
+    <%= image_tag @posts.image_url %>
+    <p><%= @posts.content %></p>
+<% end %>

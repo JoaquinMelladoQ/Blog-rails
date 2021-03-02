@@ -1,0 +1,17 @@
+<h1>Posts#dashboard</h1>
+<p>Find me in app/views/posts/dashboard.html.erb</p>
+<form action="/posts/create" method="get" id="create_posts">
+    <div class="mb-3">
+        <label for="title" class="form-label">TITULO</label>
+        <input type="title" class="form-control" name="title">
+    </div>
+    <div class="mb-3">
+        <label for="image_url" class="form-label">IMAGEN</label>
+        <input type="text" class="form-control" name="image_url">
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">CONTENIDO</label>
+        <textarea class="form-control" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
